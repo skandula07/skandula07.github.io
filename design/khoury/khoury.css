@@ -1,0 +1,155 @@
+:root {
+  --highlight-color: rgb(173, 204, 247);
+  --main-color: rgb(255, 255, 255);
+}
+
+body {
+  /* background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, var(--grid-color) 15px, var(--grid-color) 16px), repeating-linear-gradient(0deg, transparent, transparent 15px, var(--grid-color) 15px, var(--grid-color) 16px); */
+}
+.content {
+  padding: 30px 60px 30px 60px;
+  /* border: 1px solid rgb(0, 0, 0); */
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.section h2 p {
+  margin-left: 30px;
+}
+
+.section h2 {
+  margin-top: 30px;
+  font-size: 18pt;
+}
+
+.section h2::after {
+  font-family: "Helvetica";
+  content: " ☆";
+}
+
+.section h1 {
+  padding: 10px;
+  /* background-color: black; */
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.section h1 span {
+  background-color: var(--highlight-color);
+  /* color: white; */
+}
+
+.photoset {
+  display: flex;
+  /* background-color: dodgerblue; */
+  justify-content: center;
+}
+.photoset img {
+  /* width: 30%; */
+  margin: 0px 5px 5px 0px;
+  filter: brightness(98%);
+}
+
+.wrapper {
+  margin: 20px 200px 0 200px;
+  align-items: center;
+}
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  /* text-decoration: none; */
+  color: black;
+}
+
+.photoset img:hover {
+  /* background-size: 105px; */
+  /* transform: scale(5px); */
+  /* -webkit-filter: drop-shadow(0px 0px 6px var(--highlight-color)); */
+
+  box-shadow: 0px 0px 10px var(--highlight-color);
+  filter: brightness(100%);
+}
+
+.sidebackground {
+  width: 500px;
+  height: 100vh;
+  z-index: -20;
+  background: linear-gradient(
+    90deg,
+    var(--highlight-color) 50%,
+    var(--main-color) 100%
+  );
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.window {
+  z-index: 1000;
+}
+.pageicon {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 10px;
+    right: 100px;
+    top: 250px;
+    z-index: 100;
+    width: 500px;
+}
+.pageicon-body{
+    background-image: url("./higu.jpg");
+    background-size: 500px;
+    background-position: center;
+    border-radius: 0px 0px 10px 10px;
+  height: 175px;
+  
+}
+
+
+
+
+.bgcloud {
+  position: fixed;
+  z-index: -10;
+}
+
+.bgcloud.one {
+  left: 5px;
+  top: 20px;
+}
+
+.bgcloud.two {
+  right: 90px;
+  top: 270px;
+}
+
+.bgcloud.three {
+  left: 30px;
+  bottom: 70px;
+}
+
+#toTop {
+  border: 1px solid;
+}
+
+.wrapper p {
+    font-size: 12pt;
+    font-style: oblique;
+
+    /* text-shadow: 0px 0px 5px white; */
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+  .photoset img {
+      width: 90%;
+  }
+
+  .pageicon {
+    visibility: hidden;
+  }
+}

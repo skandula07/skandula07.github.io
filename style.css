@@ -1,0 +1,184 @@
+:root {
+    --highlight-color: rgb(173, 224, 188);
+    --gray: rgb(243, 246, 236);
+    --yellow: rgb(227, 239, 187);
+    --blue: rgb(77, 172, 239);
+    --purple: rgb(166, 149, 243);
+    --dark: rgb(38, 51, 86);
+    --red: rgb(241, 101, 152);
+    /* --highlight-color: rgb(89, 214, 162); */
+}
+
+
+
+
+.wrapper {
+    padding: 20px 200px 20px 200px;
+}
+
+body {
+    /* background-color: var(--gray); */
+}
+
+
+::selection {
+    background-color: var(--yellow);
+    color: var(--blue);
+}
+
+a {
+    color: var(--blue)
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu-card {
+    width: 19%;
+    margin: 5px;
+    border: 1px solid var(--blue);
+    text-align: center;
+    transition: 0.5s;
+    color: var(--highlight-color);
+    background-color: var(--blue);
+
+
+    /* background-color: black; */
+}
+
+.menu-link a {
+    /* color: var(--highlight-color); */
+    text-decoration: none;
+}
+
+.menu-card .image {
+    height: 300px;
+    /* width: 100px; */
+    background-color: rgb(203, 221, 231);
+    background-position: center;
+    transition: 0.5s;
+
+}
+
+.menu-card .body-text {
+    padding: 10px;
+    padding-bottom: 15px;
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+
+.menu-card:hover {
+    box-shadow: 0px 0px 8px var(--blue);
+    color: var(--blue);
+    background-color: var(--highlight-color);
+
+}
+.menu-card:hover .body-text{
+        color: var(--blue);
+    /* background-color: var(--highlight-color); */
+
+}
+.menu-card:hover .image {
+    filter: brightness(80%);
+    background-size: 405px;
+}
+
+.menu-card:hover .coop {
+    background-size: 305px;
+}
+.menu-card:hover .ux {
+    background-size: 305px;
+}
+h1, p, li {
+    color: var(--dark)
+}
+
+.note h3 {
+    color: var(--red);
+}
+.note p{
+    color: var(--red);
+}
+
+.contact {
+    color: var(--red);
+}
+
+.illus {
+    background-image: url('./illustration/coincidence.jpg');
+    background-size: 400px;
+}
+.des {
+    background-image: url('./design/tovictory.png');
+    background-size: 400px;
+
+}
+.ux {
+    background-image: url('./ux/MBTRIVIA/images/image20.png');
+    background-size: 300px;
+
+}
+
+.coop {
+    background-image: url('./design/khoury/PAWS_HAPPY.png');
+    background-size: 300px;
+    /* background-position: ; */
+
+}
+.abt {
+    background-image: url('./illustration/self portrait.jpg');
+    background-size: 400px;
+
+}
+
+.photoset {
+    align-items: center;
+}
+
+
+.photoset {
+    align-items: center;
+}
+
+.photoset img {
+    border-radius: 20px;
+    transition: 0.3s;
+
+}
+
+.photoset img:hover {
+    box-shadow: 0px 0px 8px var(--red);
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .wrapper {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .card, .boxy {
+        width: 100%;
+    }
+    
+    li {
+        width: 80%
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-card {
+     width: 100%;
+    }
+
+    .coop {
+       
+    }
+}

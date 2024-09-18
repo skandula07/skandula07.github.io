@@ -1,0 +1,358 @@
+:root {
+  --highlight-color: rgb(175, 185, 255);
+  --grey: rgb(102, 102, 126);
+  --red: rgb(238, 189, 199);
+  --green: rgb(147, 190, 227);
+  --yellow: rgb(247, 227, 225);
+  --main-color: rgb(255, 255, 255);
+}
+
+body {
+  position: fixed;
+  width: 100vw;
+  padding: 40px;
+  cursor: pointer;
+  font-family: "Cousine";
+}
+
+::selection {
+  color: var(--main-color);
+  background: var(--highlight-color);
+}
+
+nav {
+  padding-bottom: 15px;
+  position: fixed;
+  /* width: 80vw; */
+  display: flex;
+  left: 150px;
+  right: 150px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: black;
+  transition: transform 0.5s;
+}
+
+a:hover {
+  text-shadow: 1px 1px 10px var(--highlight-color),
+    1px 1px 10px var(--highlight-color);
+  text-transform: rotate(-90deg);
+
+}
+
+aside {
+  padding-left: 40px;
+  padding-right: 20px;
+}
+
+/* .intro {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column; 
+    position: absolute;
+    top: 200px;
+    width: 300px;
+} */
+
+aside a {
+  color: black;
+}
+
+.sidebyside {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebyside img {
+  margin-right: 10px;
+  mix-blend-mode: darken;
+}
+
+.footer-links {
+  position: fixed;
+  bottom: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 9pt;
+  width: 100vw;
+  background-color: var(--main-color);
+  /* color: var(--highlight-color); */
+}
+
+.footer-links img:hover {
+  transform: rotate(-3deg);
+  -webkit-filter: drop-shadow(0px 0px 2px var(--highlight-color));
+  /* filter: drop-shadow(2px 2px var(--highlight-color));     */
+}
+
+.footer-icon:hover::after { 
+  content: attr(data-title); 
+  position: absolute; 
+  transform: translateX(-50%);
+  bottom: 50px;
+  background: linear-gradient(
+    180deg,
+    var(--highlight-color) 50%,
+    var(--main-color) 120%
+  );
+  color: #fff; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  white-space: nowrap; 
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 10; 
+  opacity: 1; 
+  transition: opacity 0.3s; 
+} 
+
+.footer-icon::after { 
+  opacity: 0; 
+  pointer-events: none; 
+} 
+
+
+
+
+.piczoom {
+  width: 110px;
+  height: 110px;
+  background-image: url("./uxicon.jpg");
+  background-position: center;
+  margin-right: 20px;
+  background-size: 110px;
+  transition: all 0.2s ease-in;
+}
+
+.piczoom:hover {
+  background-image: url("./uxicon.jpg");
+  background-size: 115px;
+  background-position: center;
+  background-color: var(--highlight-color) 30%;
+  -webkit-filter: drop-shadow(0px 0px 2px var(--highlight-color));
+}
+
+.windows {
+  display: flex;
+  flex-direction: column;
+  padding: 20;
+  border: 1px solid var(--highlight-color);
+  position: absolute;
+  font-size: 10pt;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.windows:hover {
+  box-shadow: 0 4px 8px 0 var(--highlight-color);
+  /* transform: rotate(-0.2deg); */
+  z-index: 1;
+}
+
+.windows-header {
+  display: flex;
+  font-size: 11pt;
+  border-bottom: 1px solid var(--highlight-color);
+  border-radius: 15px 15px 0px 0px;
+  justify-content: space-between;
+  /* width:100%; */
+  padding: 7px;
+  color: white;
+  cursor: grab;
+  background: linear-gradient(
+    180deg,
+    var(--highlight-color) 50%,
+    var(--main-color) 120%
+  );
+}
+
+
+#intro {
+    width: 300px; top: 100px; left: 60px;
+}
+
+#toc {
+    top: 400px; left: 150px
+}
+
+.window-body {
+  padding: 10px;
+}
+
+li {
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+}
+
+.pagewrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.projectframe {
+  width: 60vw;
+  height: 75vh;
+  padding: 20px;
+  border-left: 1px dashed black;
+  margin-right: 30px;
+}
+
+.projectframe iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.notification {
+  position: absolute;
+  top: 90px;
+  left: 72%;
+  font-size: 7pt;
+  color: var(--main-color);
+  padding: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--highlight-color) 50%,
+    var(--main-color) 120%
+  );
+  border: 1px solid var(--highlight-color);
+  border-radius: 10px;
+}
+.notification:hover {
+  box-shadow: 0 4px 8px 0 var(--highlight-color);
+  /* transform: rotate(-0.2deg); */
+  z-index: 1;
+}
+
+.title-bar-controls {
+  display: flex;
+}
+
+.title-bar-controls button {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  border-radius: 20px;
+  padding-right: 10px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.title-bar-controls button:hover {
+    /* filter: brightness(70%); */
+    background: var(--main-color);
+    color: var(--highlight-color);
+    filter: blur(0.1px);
+    transform: rotate(-1deg);
+
+    /* font-size: 6px; */
+}
+
+button.decalbutton1 {
+  background: linear-gradient(180deg, var(--highlight-color) 50%, var(--main-color) 150%);
+}
+button.decalbutton2 {
+  background: linear-gradient(
+    180deg,
+    var(--highlight-color) 50%,
+    var(--main-color) 150%
+  );
+}
+button.decalbutton3 {
+  background: linear-gradient(180deg, var(--highlight-color) 50%, var(--main-color) 150%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-size: cover;
+    position: static;
+    padding: 2px;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+    position: static;
+  }
+  nav div {
+      margin-top: 15px;
+  }
+  aside, main {
+    margin: 0px;
+    /* display: flex;
+    flex-direction: row; */
+  }
+  .pagewrapper {
+    flex-direction: column;
+    width: 100%;
+    margin: 2px;
+    padding: 2px;
+
+  }
+  .projectframe {
+    border: none;
+  }
+
+  .windows {
+    position: static;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  .windows:hover {
+    box-shadow: none;
+  }
+  #intro #toc {
+    margin-top: 0px;
+     width: 49%;
+  }
+  .windows-header {
+    visibility: hidden;
+  }
+  .projectframe {
+    width: 90%
+  }
+
+  iframe {
+    position: static;
+
+    width: 75%;
+    height: 40%;
+  }
+
+  .notification {
+    visibility: hidden;
+  }
+
+  .sidebyside {
+    margin-top: 2px;
+  }
+
+
+
+}

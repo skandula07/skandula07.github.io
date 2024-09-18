@@ -1,0 +1,162 @@
+:root {
+    --highlight-color: rgb(255, 197, 197);
+  --red: rgb(249, 97, 135);
+  --green: rgb(147, 190, 227);
+  --yellow: rgb(247, 227, 225);
+  --main-color: rgb(255, 255, 255);
+}
+body {
+    background: black;
+    text-align: center;
+
+    
+    color: white;
+}
+
+::selection {
+    background-color: var(--red);
+    /* color: black; */
+  }
+
+h1 {
+    font-size: 36pt;
+}
+.highlight {
+    font-style: italic;
+    background-color: var(--highlight-color);
+        color: black;
+
+}
+
+.gradient {
+    position: fixed;
+    z-index: -999999;
+    bottom: 0px;
+    height: 50vh;
+    left: 0px;
+    width: 100vw;
+    /* background: linear-gradient(180deg, black 30%, var(--highlight-color) 150%); */
+
+
+}
+
+
+h2 {
+    font-size: 24pt; 
+}
+
+h1 {
+    text-align: center;
+    
+    color: black;
+
+}
+.info {
+    font-size: 12pt;
+    text-align: center;
+}
+
+
+h3 {
+    margin: none;
+    padding: none;
+}
+
+.caption {
+    padding-bottom: 20px;
+    /* width: 500px; */
+}
+
+.wrapper {
+    padding-left: 200px;
+    padding-right: 200px;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+}
+
+.photoset {
+     /* border: 1px solid black; */
+
+    width: 100%;
+    justify-content: space-between;
+    /* margin-bottom: 10px; */
+    
+    margin-right: 5px;
+    margin-left: 5px;
+    align-items: center;
+}
+
+.toc a{
+    margin: 10px;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+}
+
+
+.photoset .boxy {
+
+    margin: 5px;
+
+}
+.photoset img {
+    margin: 5px;
+    /* margin-left: 5px; */
+    box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+
+}
+
+.card, .fill {
+    border-radius: 10px;
+    background-color: var(--highlight-color);
+    
+}
+
+
+.twobytwo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.card {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: 5px;
+    width: 90%;
+    align-content: center;
+    text-align: left;
+    /* height: 300px; */
+    border: 1px solid var(--highlight-color);
+    margin-bottom: 10px;
+    background: linear-gradient(180deg, var(--highlight-color) 80%, white 150%);
+
+    box-shadow: 0px 0px 8px var(--highlight-color);
+    font-size: 12pt;
+
+
+}
+
+.fill {
+    background-color: var(--highlight-color);
+    height: 13%;
+    /* margin-right: 5px; */
+    /* margin-left: 10px; */
+}
+
+
+@media only screen and (max-width: 800px) {
+
+.wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card, .boxy {
+    width: 100%;
+}
+
+
+}

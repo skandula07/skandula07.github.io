@@ -1,0 +1,257 @@
+:root {
+    --main-color: rgb(255, 255, 255);
+    --highlight-color: rgb(246, 188, 126);
+}
+
+body {
+    
+    font-family: 'Helvetica';
+}
+
+.icon {
+background-image: url("./audio thumb.png");
+background-size: 100px;
+background-position: center;
+border-radius: 5px;
+
+width: 100px;
+height: 100px;
+transition: all 0.2s;
+}
+
+.icon:hover {
+    background-size: 105px;
+   box-shadow: 0 0 4px var(--highlight-color);
+}
+
+
+::selection {
+    color: var(--main-color);
+    background: var(--highlight-color);
+  }
+
+h1, h2, h3, h4, h5, nav {
+    font-family: 'Cousine';
+}
+
+/* h1 {
+    padding-bottom: 10px;
+    height: 26px;
+ background: linear-gradient(
+  white, white 33px,
+  pink 35px, pink 36px);
+} */
+
+
+
+.headshot {
+    width: 100%;
+    height: 300px;
+    background-size: 360px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.headshot.real {
+    background-image: url("headshot.jpg");
+    background-color: blue;
+    background-size: 500px;
+    background-position: center;
+    /* background-size: 300px; */
+}
+
+
+.headshot.avatar {
+    background-image: url("./me1.png");
+    background-position: center;
+    background-size: 400px;
+    margin-right: 5px;
+
+
+}
+
+
+
+
+.headshot.avatar:hover {
+    background-image: url("./me2.png");
+
+    background-size: 410px;
+}
+
+.headshot:hover {
+    box-shadow: 0 0 10px var(--highlight-color);
+
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.likes li::before {
+    content: '\2713';
+    color:rgb(162, 234, 129);
+    margin: 0 1em;    /* any design */
+}
+
+ul.dislikes li::before {
+    content: '𝙭';
+    margin: 0 1em;    /* any design */
+    color:rgb(234, 129, 129);
+}
+
+label {
+    background-color: var(--main-color);
+
+}
+
+.wrapper {
+    margin:  20px 300px 0 300px;
+    padding-bottom: 25px;
+    /* border: 1px solid var(--highlight-color); */
+    border-radius: 10px;
+
+    background-color: white;
+    /* box-shadow: 0 0 10px var(--highlight-color); */
+}
+
+.wrapper h1 {
+    padding-left: 25px;
+    padding-top: 25px;
+
+}
+
+
+.content {
+    padding: 25px;
+}
+
+.twobytwo {
+    display: flex; 
+    width: 100%;
+    /* border: 1px solid black; */
+    justify-content: space-evenly;
+    /* padding: 10px; */
+}
+
+.twobytwo.updates {
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+    margin-left: 20px;
+}
+
+.twobytwo h3 {
+    margin: 0;
+    padding: 0;
+    width: 75px;
+}
+
+.twobytwo p {
+    margin: 0;
+    padding: 0;
+
+    padding-left: 50px;
+    text-align: right;
+}
+
+audio {
+    width: 75%;
+    justify-self: center;
+}
+
+
+.keyboard {
+    /* display: flex; */
+    position:fixed;
+    top:0px;
+    left: 0px;
+    z-index: -10000;
+
+/* flex-direction: row; */
+/* border: 1px solid black; */
+height: 100vh;
+/* justify-content: space-evenly; */
+/* transform: rotate(90deg); */
+/* background: linear-gradient(90deg, var(--highlight-color) 0%, white 30%); */
+
+}
+
+.white-key {
+    width: 300px;
+    height: calc(100vh / 7);
+    border-bottom: 1px solid  rgb(193, 192, 190);
+}
+
+.black-key {
+    width: 200px;
+    height: 40px;
+    position: fixed;
+    left: -10px;
+    background: linear-gradient(90deg, rgb(45, 43, 42) 50%, white 120%);
+    z-index: -5;
+    border: 1px solid rgb(193, 192, 190);
+}
+
+.bgimg1, .bgimg2{
+    position: fixed;
+    z-index: 5;
+    mix-blend-mode: darken;
+    filter: drop-shadow(0 0 3px var(--highlight-color));
+}
+
+
+.bgimg1:hover {
+    transform: rotate(-5deg);
+    filter: drop-shadow(0 0 10px var(--highlight-color));
+}
+
+.bgimg2:hover {
+    transform: rotate(5deg);
+    filter: drop-shadow(0 0 10px var(--highlight-color));
+}
+
+
+@media only screen and (max-width: 800px) {
+   
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+      background-size: cover;
+      position: static;
+      padding: 2px;
+    }
+  
+    nav {
+      flex-direction: column;
+      text-align: center;
+      position: static;
+    }
+    nav div {
+        margin-top: 15px;
+    }
+  
+  .wrapper {
+    margin:  20px 30px 0 30px;
+    align-items: center;
+  }
+  
+  .photoset {
+    flex-direction: column;
+    justify-content: center;
+  } 
+  
+  .photoset img {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+
+  .bgimg1, .bgimg2 {
+    visibility: hidden;
+  }
+}

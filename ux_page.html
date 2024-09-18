@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./ux/uxpage.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <title>UX Case Studies</title>
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <nav>
+        <span style="font-size: 24pt; background-color: black; color: white;"><i><b>Sree Kandula://</b></i></span>
+        <div>
+            <a href="index.html"> HOME</a>
+            <a href="illustration.html"> illustration</a>
+            <a href="design.html"> graphicDesign</a>
+            <a href="ux_page.html"> uxCaseStudies</a>
+            <a href="khoury.html"> khoury</a>
+            <a href="about.html"> aboutMe</a>
+        </div>
+    </nav>
+
+    <div class="pagewrapper">
+
+
+
+
+        <aside>
+            <!-- HEADER -->
+            <div class="windows" id="intro">
+                <div class="windows-header" id="intro-header">
+                    https://ux_cs.html
+                    <div class="title-bar-controls">
+                        <button class="decalbutton1">⎽</button>
+                        <button class="decalbutton2">❒</button>
+                        <button class="decalbutton3">x</button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="sidebyside">
+                        <div class="piczoom">
+                            <!-- <img src="uxicon.jpg" width="110px" height="110px"> -->
+                        </div>
+                        <h1>UX<br>Case<br>Studies</h1>
+                    </div>
+                    <p> >> Here's a log of all my UX web based design projects! You can use the table of contents to
+                        navigate
+                        between the case studies.</p>
+
+                    <p style="text-align: center;"> ☆ ★ ✮ ★ ☆ </p>
+                </div>
+            </div>
+
+            <!-- TABLE OF CONTENTS -->
+            <div class="windows" id="toc">
+                <div class="windows-header" id="toc-header">
+                    ▷ ıllı 00:57 ━━━━⬤─────── 02:39
+                    <div class="title-bar-controls">
+                        <button class="decalbutton1">⎽</button>
+                        <button class="decalbutton2">❒</button>
+                        <button class="decalbutton3">x</button>
+                    </div>
+                </div>
+                <div class="contents-wrapper">
+
+                    <ol class="contents-list">
+                        <h2> Table of Contents </h2>
+                        <li><a href="#bottles" id="bottles"> Mr. Bottles: a new look</a></li>
+                        <li><a href="#travel" id="travel"> Travel Note: A journaling themed travel app</a></li>
+                        <li><a href="#airbnb" id="airbnb"> Airbnb redesign</a></li>
+                        <li><a href="#mbta" id="mbta"> MBTriviA: A game for the Boston Subways</a></li>
+                    </ol>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- PROJECT -->
+        <main>
+            <div class="projectframe">
+                <iframe src="./ux/mrbottles/MrBottles.html" frameborder="0" id="projectframe"></iframe>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="notification" id="notif">
+        (+1 notif) away message:
+        <br>you can move these windows as you want ⋆˙⟡
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="sidebyside footer-links">
+        <a href="https://drive.google.com/file/d/1pD391D6J8FVnNpkCrZ252xbBdohCKCSF/view?usp=sharing" data-title="Resume" class="footer-icon" target="_blank" target="_blank">
+            <img src="file.webp" width="30px" height="30px"></a>
+        <a href="https://github.com/skandula07" data-title="Github" class="footer-icon" target="_blank"><img src="github.png" width="30px" height="30px"></a>
+        <a href="https://www.linkedin.com/in/sreekandula/" data-title="LinkedIn" class="footer-icon" target="_blank"><img src="linkedin.webp" width="px"
+                height="30px"></a>
+        <label> _kandula.s(at)northeastern.edu © 2024</label>
+    </div>
+
+
+    <script src="./ux/uxpage.js"></script>
+
+    <script>
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("intro"));
+        dragElement(document.getElementById("toc"));
+        dragElement(document.getElementById("notif"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "-header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "-header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
