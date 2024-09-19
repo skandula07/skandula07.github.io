@@ -35,7 +35,7 @@ h1 {
     height: 50vh;
     left: 0px;
     width: 100vw;
-    /* background: linear-gradient(180deg, black 30%, var(--highlight-color) 150%); */
+    background: linear-gradient(180deg, black 30%, var(--highlight-color) 150%);
 
 
 }
