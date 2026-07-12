@@ -7,7 +7,6 @@ export default function Resume() {
 
   return (
     <div className="w-full border-b mb-10">
-
       {/* Header row */}
       <div
         className="flex items-center justify-between px-4 py-3 cursor-pointer bg-[var(--header)]"
@@ -31,9 +30,12 @@ export default function Resume() {
           open ? "max-h-[600px]" : "max-h-0"
         }`}
       >
-        <iframe src="https://drive.google.com/file/d/1FGtO2ZcbtFSurl-F2GoabqERBaTCiMZM/preview" className="m-auto" width="100%" height="480"></iframe>
+        <iframe
+          src="https://drive.google.com/file/d/1cpjIzcEu3k6_-15t3kJnb7i6ik1TmLd_/preview"
+          width="640"
+          height="480"
+        ></iframe>{" "}
       </div>
-
     </div>
   );
 }
