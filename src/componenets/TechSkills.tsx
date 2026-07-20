@@ -29,7 +29,7 @@ export default function TechSkills() {
             <li className="pl-2">mySQL</li>
             <li className="pl-2">Assembly</li>
             <li className="pl-2">Racket</li>
-            <li className="pl-2">Rust</li>
+            {/* <li className="pl-2">Rust</li> */}
           </ul>
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function TechSkills() {
               <b>ML:</b> PyTorch, Sci-kit
             </li>
             <li>
-              <b>Firmware:</b> ROS, Arduino, ESP, Dynamixel
+              <b>Firmware:</b> ROS, Arduino, ESP
             </li>
             <li>
               <b>Graphics:</b> Unity, OpenGL, ThreeJS
@@ -77,12 +77,13 @@ export default function TechSkills() {
               <b>Database:</b> Datagrip, MongoDB Compass
             </li>
             <li>
-              <b>DevOps:</b> Docker, Github Actions, AWS, Jenkins
+              <b>DevOps:</b> Docker, Github Actions, AWS, Heroku, Vercel, Netlify
             </li>
             <li>
               <b>Tools:</b> VSCode, VMWare Fusion, Arduino IDE, Postman,
               Scenebuilder, Figma, Jetbrains
             </li>
+            
           </ul>
         </div>
       </div>

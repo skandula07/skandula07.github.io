@@ -43,7 +43,7 @@
   --highlight-text:  #1d385a; */
 
 :root {
-  --text: rgb(17, 43, 74);
+  /* --text: rgb(17, 43, 74);
   --text-h: #0a1727;
   --bg: #edf0f5;
   --card-bg: #f4f7fa;
@@ -59,7 +59,25 @@
   --header: #dceaf6;
   --header-darker: #d0e4f0;
   --highlight: #b6d1dc;
-  --highlight-text:rgb(57, 108, 129);
+  --highlight-text:rgb(57, 108, 129); */
+
+  --text: rgb(11, 59, 37);
+  --text-h: #0a271c;
+  --bg: #f9f9f9;
+  --card-bg: #f5f7f4;
+  --accent: #8ab764;
+  --red: #d26249;
+  --blue: #5d9fc9;
+  --green: #8ab764;
+  --accent-lighter: rgb(163, 206, 153);
+  --accent-bg: rgba(148, 199, 109, 0.1);
+  --accent-border: rgba(225, 240, 221, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --header: #dbe8c9;
+  --header-darker: #d1e6be;
+  --highlight: #c6e19c;
+  --highlight-text: #1d5a55;
   
   color-scheme: light;
 
